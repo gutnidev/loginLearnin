@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid mh-100 " id="loginPage">
+      <div class="row row-cols-lg-3 vh-100">
+        <div class="col col-sm-6 col-lg-4 m-auto mt-auto  px-3 leftSide">
+          <div class="card loginCard shadow-lg " id="loginCard">
+            <div class="card-body ">
+                <h5 class=" card-title text-muted">Login</h5>
+                <form name="loginForm" class="loginForm needs-validation" autocomplete="off">
+                  <div class="form-group row row-cols-1 ">
+                    <label for="email" class=" col col-form-label-sm">Email</label>
+                    <div class="col ">
+                      <input
+                        type="text"
+                        class="form-control "
+                        id="email"
+                        placeholder="Enter email"
+                        data-required="email"
+                        data-invalid-message="Введите валидный email example@example.com"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row row-cols-1">
+                    <label for="password" class="col col-form-label-sm">Password</label>
+                    <div class="col">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="Password"
+                        data-required="password"
+                        data-invalid-message="Пароль должен соержать не менее 4 символов"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <button type="button" id="registrationButton" class="btn btn-primary" data-toggle="modal" data-target="#registrationModal">Регистрация</button>
+                      <button type="submit" class="btn btn-secondary">Вход</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="col d-none d-md-flex align-items-center rightSide">
+          <div class="greetingText">
+            <h1 class="greetingTitile">Welcome to my app</h1>
+            <p class="greetingDescription">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              inventore non accusantium earum, illo dolores reprehenderit laborum
+              ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
+              ipsa exercitationem eaque totam. A.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--MODAL REGISTRATION-->
+    <!-- Modal -->
+    <div class="modal  myModal " id="registrationModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Форма регистрации</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body ">
+            <div class="container">
+              <form name="registrationForm" autocomplete="off">
+                <div class="form-group">
+                  <label for="registrationEmail">Email</label>
+                  <input type="email"
+                         class="form-control"
+                         id="registrationEmail"
+                         data-required="email"
+                         aria-describedby="registrationEmailHelp"
+                         data-invalid-message="Введите валидный email example@example.com"
+                  >
+                  <small id="registrationEmailHelp" class="form-text text-muted">Например: test@test.com</small>
+                </div>
+                <div class="form-group">
+                  <label for="registrationPassword">Пароль</label>
+                  <input
+                          type="password"
+                          class="form-control"
+                          id="registrationPassword"
+                          aria-describedby="registrationPasswordHelp"
+                          data-required="password"
+                          data-invalid-message="Введите валидный пароль"
+                  >
+                  <small id="registrationPasswordHelp" class="form-text text-muted">Пароль должен сожержать не меньше 8 букв или циф</small>
+                </div>
+                <div class="form-group">
+                  <label for="registrationNickname">Имя пользователя</label>
+                  <input
+                          type="text"
+                          class="form-control"
+                          data-required="nickname"
+                          id="registrationNickname"
+                          data-invalid-message="Имя пользователя может содержать только латинские буквы и `_`"
+                  >
+                  <small  class="form-text text-muted">Имя пользователя</small>
+                </div>
+                <div class="form-group">
+                  <label for="registrationFirstName">Ваше имя</label>
+                  <input
+                          type="text"
+                          data-required="first_name"
+                          class="form-control"
+                          id="registrationFirstName"
+                          data-invalid-message="Имя может содержать только буквы, пробелы и тире"
+
+                  >
+                </div>
+                 <div class="form-group">
+                  <label for="registrationLastName">Ваша фамилия</label>
+                  <input
+                          type="text"
+                          data-required="last_name"
+                          class="form-control"
+                          id="registrationLastName"
+                          data-invalid-message="Фамилия может содержать только буквы, пробелы и тире"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="registrationPhone">Ваш телефон</label>
+                  <input
+                          type="tel"
+                          data-required="phone"
+                          class="form-control"
+                          id="registrationPhone"
+                          data-invalid-message="Телефон может содержать только цифры, пробелы и тире"
+                  >
+                </div>
+                 <div class="form-group">
+                  <label for="registrationGender">Ваш пол</label>
+                  <input
+                          type="text"
+                          data-required="gender_orientation"
+                          class="form-control"
+                          aria-describedby="registrationGenderHelp"
+                          id="registrationGender"
+                          data-invalid-message="Введите male или female"
+                  >
+                   <small id="registrationGenderHelp" class="form-text text-muted">Введите male или female</small>
+                </div>
+                <div class="form-group ">
+                  <label for="registrationCountry">Ваша страна</label>
+                  <input
+                          type="text"
+                          data-required="country"
+                          class="form-control registrationCountry"
+                          id="registrationCountry"
+                          data-invalid-message="Введите страну"
+                  >
+                  <small class="form-text text-muted">Страна на аглийском языке, например Ukraine</small>
+                </div>
+                <div class="form-group">
+                  <label for="registrationCity">Ваш город</label>
+                  <input
+                          disabled
+                          data-required="city"
+                          type="text"
+                          class="form-control"
+                          id="registrationCity"
+                          data-invalid-message="Выберите город из выпадающего при вводе списка"
+                  >
+                  <small class="form-text text-muted">Город на аглийском языке, например Kiev</small>
+                </div>
+                 <div class="form-group">
+                  <label for="registrationBirthday">Дата Вашего рождения</label>
+                  <input
+                          type="date"
+                          data-required="dateOfBirth"
+                          class="form-control"
+                          id="registrationBirthday"
+                          data-invalid-message="Выберите дату роджения"
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Подтвердить регистрацию</button>
+                <button type="button" id="closeBtn" class="btn btn-danger btn-block" data-dismiss="modal">Закрыть окно</button>
+    </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

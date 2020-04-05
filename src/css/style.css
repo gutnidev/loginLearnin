@@ -1,0 +1,34 @@
+body{
+  background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+}
+/*body {
+  background: linear-gradient(#0c0403, #ffffff);
+}*/
+
+.loginCard{
+  background-color: rgba(91, 104, 91, 0.3) !important;
+  color: #ffffff;
+}
+
+.greetingText {
+  color: rgba(196, 255, 224, 0.87);
+}
+
+.greetingTitile {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.greetingDescription{
+  color: rgba(253, 255, 247, 0.66);
+}
+
+.rightSide{
+  background-color: rgba(48, 2, 2, 0.35);
+}
+.myModal{
+  z-index: 99999;
+}
+.form-group{
+  position: relative;
+}

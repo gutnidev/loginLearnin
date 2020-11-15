@@ -1,6 +1,6 @@
 # Login Project
 ### Demo:
-#### https://gutnivlad.github.io/loginLearnin/dist/
+#### https://gutnidev.github.io/loginLearnin/dist/
 
 
 ------------
